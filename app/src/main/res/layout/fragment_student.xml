@@ -1,0 +1,33 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.example.sanat.viewpagerwithtabs.StudentFragment">
+
+<!-- TODO: Update blank fragment layout -->
+
+<LinearLayout
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textAlignment="center"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:id="@+id/txt_student_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/student_fragment_title" />
+    <Button
+        android:layout_marginTop="30dp"
+        android:text="student Name"
+        android:id="@+id/btnStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+
+</FrameLayout>
+

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ViewPagerWithTabs</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Message Appear Here</string>
+    <string name="student_fragment_title">Student Fragment</string>
+    <string name="teacher_fragment_title">Teacher Fragment</string>
+    <string name="book_fragment_title">Book Fragment</string>
+    <string name="movie_fragment_title">Movie Fragment</string>
+    <string name="laptop_fragment_title">Laptop Fragment</string>
+    <string name="laptop_home_title">Home Fragment</string>
+</resources>
