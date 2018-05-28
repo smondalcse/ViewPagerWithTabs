@@ -16,7 +16,7 @@ public class HomeItemDetailActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
 
-    TextView txt_title_detail_home, txt_category_detail_home, txt_description_detail_home, txt_category_Price_home;
+    TextView txt_title_detail_home, txt_category_detail_home, txt_description_detail_home, txt_category_Price_home, txt_selected_item_size;
     ImageView img_Detail_home;
 
     @Override
@@ -44,10 +44,11 @@ public class HomeItemDetailActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String HomeItemTitle = intent.getExtras().getString("HomeItemTitle");
-        String HomeItemCategory = intent.getExtras().getString("HomeItemCategory");
+        String HomeItemCategory = "Category: " + intent.getExtras().getString("HomeItemCategory");
         String HomeItemDescription = intent.getExtras().getString("HomeItemDescription");
         int HomeItemImage = intent.getExtras().getInt("HomeItemImage");
         String HomeItemPrice= "Price: " + intent.getExtras().getString("HomeItemPrice");
+        String SpnrSelectedItemSize= "Size: " + intent.getExtras().getString("SpnrSelectedItemSize");
 
 
         txt_title_detail_home = (TextView) findViewById(R.id.txt_title_detail_home);
@@ -55,13 +56,14 @@ public class HomeItemDetailActivity extends AppCompatActivity {
         txt_description_detail_home = (TextView) findViewById(R.id.txt_description_detail_home);
         img_Detail_home = (ImageView) findViewById(R.id.img_Detail_home);
         txt_category_Price_home = (TextView) findViewById(R.id.txt_category_Price_home);
+        txt_selected_item_size = (TextView) findViewById(R.id.txt_selected_item_size);
 
         txt_title_detail_home.setText(HomeItemTitle);
         txt_category_detail_home.setText(HomeItemCategory);
         txt_description_detail_home.setText(HomeItemDescription);
         img_Detail_home.setImageResource(HomeItemImage);
-
         txt_category_Price_home.setText(HomeItemPrice);
+        txt_selected_item_size.setText(SpnrSelectedItemSize);
 
     }
 }

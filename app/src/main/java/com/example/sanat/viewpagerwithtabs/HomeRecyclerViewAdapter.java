@@ -42,7 +42,7 @@ public class HomeRecyclerViewAdapter extends RecyclerView.Adapter<HomeRecyclerVi
     }
 
     @Override
-    public void onBindViewHolder(MyHomeViewHolder holder, final int position) {
+    public void onBindViewHolder(final MyHomeViewHolder holder, final int position) {
 
         String title = mHomeModel.get(position).getTitle();
         holder.tv_home_title_id.setText(title);
@@ -57,12 +57,14 @@ public class HomeRecyclerViewAdapter extends RecyclerView.Adapter<HomeRecyclerVi
             @Override
             public void onClick(View view) {
                // Toast.makeText(mContext, mHomeModel.get(position).getTitle(), Toast.LENGTH_SHORT).show();
+                String SpnrSelectedItemSize = holder.spnrItemSize.getSelectedItem().toString();
                 Intent intent = new Intent(mContext, HomeItemDetailActivity.class);
                 intent.putExtra("HomeItemTitle", mHomeModel.get(position).getTitle());
                 intent.putExtra("HomeItemCategory", mHomeModel.get(position).getCategory());
                 intent.putExtra("HomeItemImage", mHomeModel.get(position).getThumbnail());
                 intent.putExtra("HomeItemDescription", mHomeModel.get(position).getDescription());
                 intent.putExtra("HomeItemPrice", mHomeModel.get(position).getPrice());
+                intent.putExtra("SpnrSelectedItemSize", SpnrSelectedItemSize);
 
                 mContext.startActivity(intent);
             }

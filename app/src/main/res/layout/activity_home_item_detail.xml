@@ -49,19 +49,27 @@
                     android:background="@color/colorBlack"
                     android:id="@+id/img_Detail_home"/>
 
-
-                <TextView
-                    android:id="@+id/txt_category_detail_home"
-                    android:paddingBottom="5dp"
-                    android:paddingTop="5dp"
-                    android:paddingRight="10dp"
-                    android:paddingLeft="10dp"
-                    android:background="@color/colorTabText"
-                    android:text="Category"
-                    android:textSize="18sp"
-                    android:layout_marginTop="10dp"
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/txt_category_detail_home"
+                        android:text="Category: "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_marginLeft="20dp"
+                        android:text="Size: "
+                        android:id="@+id/txt_selected_item_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+
+
 
                 <TextView
                     android:id="@+id/txt_category_Price_home"
