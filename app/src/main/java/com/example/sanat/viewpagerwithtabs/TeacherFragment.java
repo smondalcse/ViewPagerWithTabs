@@ -1,8 +1,10 @@
 package com.example.sanat.viewpagerwithtabs;
 
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +18,10 @@ import android.widget.Toast;
  */
 public class TeacherFragment extends Fragment {
     private TextView textView;
-    private Button btn;
+    private Button btnOk, btncancel;
+
+    int okcancelstatus = 0;
+    // ok  = 1, cancel = 2
 
     public TeacherFragment() {
         // Required empty public constructor
@@ -30,12 +35,33 @@ public class TeacherFragment extends Fragment {
         textView = (TextView) view.findViewById(R.id.txt_display);
         textView.setText(getArguments().getString("Message"));
 
-        btn = (Button) view.findViewById(R.id.btnOk);
+        btnOk = (Button) view.findViewById(R.id.btnOk);
+        btncancel = (Button) view.findViewById(R.id.btncancel);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "I am Teacher Fragment", Toast.LENGTH_SHORT).show();
+                if(okcancelstatus == 1){
+                    Toast.makeText(getActivity(), "Already Pressed", Toast.LENGTH_SHORT).show();
+                } else {
+                    okcancelstatus = 1;
+                    btnOk.setBackgroundColor(ContextCompat.getColor(getActivity() ,R.color.colorPrimary));
+                    btncancel.setBackgroundColor(Color.TRANSPARENT);
+                }
+
+            }
+        });
+
+        btncancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(okcancelstatus == 2){
+                    Toast.makeText(getActivity(), "Already cancel Pressed", Toast.LENGTH_SHORT).show();
+                } else {
+                    okcancelstatus = 2;
+                    btncancel.setBackgroundColor(ContextCompat.getColor(getActivity() ,R.color.colorPrimary));
+                    btnOk.setBackgroundColor(Color.TRANSPARENT);
+                }
             }
         });
 

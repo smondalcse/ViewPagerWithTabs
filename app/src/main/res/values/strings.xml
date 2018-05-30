@@ -9,4 +9,15 @@
     <string name="movie_fragment_title">Movie Fragment</string>
     <string name="laptop_fragment_title">Laptop Fragment</string>
     <string name="laptop_home_title">Home Fragment</string>
+
+    <string-array name="countries">
+        <item>Bahrain</item>
+        <item>Bangladesh</item>
+        <item>Barbados</item>
+        <item>Belarus</item>
+        <item>Belgium</item>
+        <item>Belize</item>
+        <item>Benin</item>
+    </string-array>
+
 </resources>
